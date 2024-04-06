@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    overflow-x: hidden; /*così il sito non si muove a dx e sx*/
+    max-width: 100%;
+    background-color: white;
+    
+    
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    body {
+        background-color: rgb(21, 21, 21);
+        font-family: "Roboto Mono", monospace;
+    }
+
+#bannerhome {
+    background-image: url("immagini/cocktail3.png");
+    width: 100%;
+    height: 31.2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 0;
+    
+    
+    
+}
+
+#intro {
+    position: relative;
+    padding-block: 10rem;
+}
+
+#titolo {
+    color: white;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+#sottotitolo {
+    color: white;
+    padding-block: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+ a {
+    text-decoration: none;
+    color: white;
+    border: none;
+    
+ }
+
+ a:visited {
+    text-decoration: none;
+    color: white;
+ }
+
+ .container {
+
+    position: relative;
+    
+    display: flex;
+    
+    justify-content: center;
+    
+    align-items: center;
+    
+    max-width: 800px;
+    
+    flex-wrap: wrap;
+    
+    z-index: 1;
+    
+    }
+
+    .container .card {
+
+        position: relative;
+        
+        width: 30%;
+        
+        height: auto;
+        
+        margin: 20px;
+        
+        box-shadow: 20px 20px 50px rgba(0,0, 0, 0.5);
+        
+        border-radius: 5px;
+        
+        background: rgba(255, 255, 255, 0.1);
+        
+        overflow: hidden;
+        
+        display: flex;
+        
+        justify-content: center;
+        
+        align-items: center;
+        
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        
+        backdrop-filter: blur(5px);
+        
+        }
+
+        .container .card .content {
+
+            padding: 20px;
+            
+            text-align: center;
+            
+            transition: 0.5s;
+            
+            }
+
+            .icona {
+                max-width: 15rem;
+                align-items: center;
+            }
+
+            .bottoni {
+                font-size: 1rem;
+                border: 1px solid white;
+                padding-inline: 2rem;
+                padding-block: 0.5rem;
+                border-radius: 20px;
+                font-family: "Roboto Mono", monospace;
+            }
+
+            .bottoni:hover {
+                background-color: white;
+                color: black;
+                border: 1px solid black;
+            }
+            
+            @keyframes rotate {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+              }
+
+              .icona:hover {
+                animation: rotate 1s ease-in-out forwards;
+              }
+
+
+              /*pagina cocktails*/
+              #bannercocktail {
+                position: relative; /* Enable relative positioning for child elements */
+                height: 20rem;
+                text-align: center;
+              }
+              
+              #bannercocktail::before { 
+                content: ""; /* Empty content for pseudo-element */
+                position: absolute; /* Position the pseudo-element absolutely */
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0; /* Fill the entire #bannercocktail element */
+                background-image: url("immagini/alcolici.png");
+                /* Set background opacity for semi-transparent effect */
+                opacity: 0.4;  /* Adjust as needed */
+                z-index: -1; /* Place the background behind the text content */
+              }
+              
+              #bannercocktail h2{
+                /* Style your text content here */
+                color: #fff; /* Example white text color */
+                position: relative; /* Inherit relative positioning for text */
+                z-index: 1; /* Ensure text is displayed on top of the background */
+                font-size: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%; 
+              }
+
+              .labelform {
+                color: white;
+                font-size: 1.5rem;
+              }
+
+              .gusto {
+                color: white;
+              }
+
+              .ricerche {
+               margin-left: 8rem;
+               margin-right: 8rem;
+              }
+
+              .input {
+                width: 80%;
+                height: 2rem;
+              }
+
+              .cerca {
+                background-color: black;
+                color: white;
+                border: 1px solid white;
+                padding-inline: 10px;
+                padding-block: 0.5rem;
+                border-radius: 20px;
+                font-family: "Roboto Mono", monospace;
+              }
+
+              .cerca:hover {
+                color: black;
+                background-color: white;
+                cursor: pointer;
+              }
+
+              .container1 {
+                display: block;
+              }
+
+              .subcontainer1, .subcontainer2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+                #bittersweet {
+                   padding-block: 1.5rem; 
+                }
+
+              .bottonigusto {
+                font-family: "Roboto mono", monospace;
+                padding-inline: 2rem;
+                padding-block: 2rem;
+                cursor: pointer;
+                width: 30%;  /* Adjust as needed */
+                height: 30%;
+                display: flex; /* Enable flexbox for the button */
+                align-items: center; /* Center content vertically */
+                justify-content: center;
+                background-color: white;
+                border: none;
+                border-radius: 20px;
+
+              }
+
+              .bottonigusto:hover {
+                color: white;
+                background-color: black;
+                border: 1px solid white;
+              }
+           
+              .container2 {
+                display: flex;
+                justify-content: space-between;
+              }
+
+              .bottonigusto1 {
+                font-family: "Roboto mono", monospace;
+                padding-inline: 1rem;
+                padding-block: 1rem;
+                cursor: pointer;
+                
+                display: flex; /* Enable flexbox for the button */
+                align-items: center; /* Center content vertically */
+                
+                background-color: white;
+                border: none;
+                border-radius: 20px;
+              }
+
+              .bottonigusto1:hover {
+                color: white;
+                background-color: black;
+                border: 1px solid white;
+              }
+
+              .addingredient {
+                color: white;
+              }
+
+              .quantita {
+                width: 30px;
+              }
+
+              .misura {
+                width: 40px;
+              }
+
+              .ingred {
+                width: 100%;
+              }
+
+              #preparation {
+                width: 100%;
+              }
+
+              #addcontainer {
+                margin: 0 auto;
+                text-align: center;
+              }
+
+              #add {
+                padding-inline: 20px;
+                padding-block: 10px;
+                border-radius: 20px;
+                border: none;
+              }
+
+              #add:hover {
+                cursor: pointer;
+                color: white;
+                background-color: black;
+                border: 1px solid white;
+              } 
+
+              .esterno {
+                display: flex;
+              }
+              .internofoto {
+                width: 40%;
+                height: 300px;
+                margin-inline: 3rem;
+                text-align: center;
+                display: inline-block; /* Set the image display to inline-block */
+                vertical-align: middle;
+              }
+
+              .fotococktail {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+                object-fit: cover;
+                
+              }
+
+              .internoinfo {
+                color: white;
+              }
+
+              .indietro {
+                color: white;
+              }
+
+              .back {
+                text-align: center;
+              }
+
+              .sorry {
+                color: white;
+                font-size: 2rem;
+              }
+
+              .aggiunta {
+                text-align: center;
+                color: #fff;
+              }
+}

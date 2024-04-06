@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="homepage.html">The cocktail book.</a></h1>
+    <form action="nameselector.php" method="POST">
+        <label for="ricerca">Cerca un cocktail per nome:</label>
+        <input type="text" name="ricerca" id="ricerca" placeholder="Inserisci il nome del cocktail..."/>
+        <input type="submit" value="cerca" />
+    </form>
+
+    <form action="ingredientselector.php" method="post">
+        Cerca per ingrediente: 
+        <input type="text" name="ingrediente" />
+        <input type="submit" value="cerca" />
+    </form>
+
+    <h2>Cerca per gusto:</h2>
+    <form action="tasteselector.php" method="post">
+        <button type="submit" name="taste" value="Fresh">Fresh</button>
+        <button type="submit" name="taste" value="Bitter sweet">Bitter sweet</button>
+        <button type="submit" name="taste" value="Boozy">Boozy</button>
+        <button type="submit" name="taste" value="Sweet">Sweet</button>
+        <button type="submit" name="taste" value="Sout">Sour</button>
+        <button type="submit" name="taste" value="Salty">Salty</button>
+    </form>
+
+    <h2>Cerca per orario:</h2>
+    <form action="timeselector.php" method="POST">
+        <button type="submit" name="timing" value="All day">All day</button>
+        <button type="submit" name="timing" value="Pre-dinner">Pre-dinner sweet</button>
+        <button type="submit" name="timing" value="After dinner">After dinner</button>
+        <button type="submit" name="timing" value="Longdrink">Longdrink</button>
+    </form>
+
+      <!-- AGGIUNGERE CERCA PER INGREDIENTE -->
+      <!-- AGGIUNGERE DIVISIONE INIZIALE TRA COCKTAIL E SOFT DRINKS -->
+      <!-- FAR SI CHE L'UTENTE POSSA AGGIUNGERE UNA NUOVA BEVANDA AL DATABASE -->
+    <h3>Aggiungi una nuova bevanda ALCOLICA</h3>
+    <form action="addalcolico.php" method="post">
+        Nome: <input type="text" name="nome" required/>
+        Timing: <input type="text" name="timing" id="timing" />
+        Taste: <select name="taste" id="taste">
+            <option name="taste" value="sweet">Sweet</option>
+            <option name="taste" value="bitter">Bitter</option>
+            <option name="taste" value="salty">Salty</option>
+            <option name="taste" value="bitter sweet">Bitter Sweet</option>
+            <option name="taste" value="sour">Sour</option>
+            <option name="taste" value="fresh">Fresh</option>
+        </select> <br>
+        Primo ingrediente: <input type="text" name="ingrediente1nome" required/> 
+        Quantità: <input type="number" name="quantita1" />
+        Misura: <select name="misura1" id="misura1">
+            <option name="misura1" value="cl">cl</option>
+            <option name="misura1" value="ml">ml</option>
+            <option name="misura1" value="g">g</option>
+            <option name="misura1" value="cup">cup</option>
+            <option name="misura1" value="tsp">tsp</option>
+            <option name="misura1" value="bar spoon">Bar spoon</option>
+            <option name="misura1" value="dashes">dashes</option>
+            <option name="misura1" value="drops">drops</option>
+            <option name="misura1" value="slice">slice</option>
+        </select>
+        <br>
+        Secondo ingrediente: <input type="text" name="ingrediente2nome" required/> 
+        Quantità: <input type="number" name="quantita2" />
+        Misura: <select name="misura2" id="misura2">
+            <option name="misura2" value="cl">cl</option>
+            <option name="misura2" value="ml">ml</option>
+            <option name="misura2" value="g">g</option>
+            <option name="misura2" value="cup">cup</option>
+            <option name="misura2" value="tsp">tsp</option>
+            <option name="misura2" value="bar spoon">Bar spoon</option>
+            <option name="misura2" value="dashes">dashes</option>
+            <option name="misura2" value="drops">drops</option>
+            <option name="misura2" value="slice">slice</option>
+        </select>
+        <br>
+        Terzo ingrediente: <input type="text" name="ingrediente3nome" /> 
+        Quantità: <input type="number" name="quantita3" />
+        Misura: <select name="misura3" id="misura2">
+            <option name="misura3" value="cl">cl</option>
+            <option name="misura3" value="ml">ml</option>
+            <option name="misura3" value="g">g</option>
+            <option name="misura3" value="cup">cup</option>
+            <option name="misura3" value="tsp">tsp</option>
+            <option name="misura3" value="bar spoon">Bar spoon</option>
+            <option name="misura3" value="dashes">dashes</option>
+            <option name="misura3" value="drops">drops</option>
+            <option name="misura3" value="slice">slice</option>
+        </select>
+        <br>
+        Quarto ingrediente: <input type="text" name="ingrediente4nome" /> 
+        Quantità: <input type="number" name="quantita4" />
+        Misura: <select name="misura4" id="misura2">
+            <option name="misura4" value="cl">cl</option>
+            <option name="misura4" value="ml">ml</option>
+            <option name="misura4" value="g">g</option>
+            <option name="misura4" value="cup">cup</option>
+            <option name="misura4" value="tsp">tsp</option>
+            <option name="misura4" value="bar spoon">Bar spoon</option>
+            <option name="misura4" value="dashes">dashes</option>
+            <option name="misura4" value="drops">drops</option>
+            <option name="misura4" value="slice">slice</option>
+        </select>
+        <br>
+        Quinto ingrediente: <input type="text" name="ingrediente5nome" /> 
+        Quantità: <input type="number" name="quantita5" />
+        Misura: <select name="misura5" id="misura2">
+            <option name="misura5" value="cl">cl</option>
+            <option name="misura5" value="ml">ml</option>
+            <option name="misura5" value="g">g</option>
+            <option name="misura5" value="cup">cup</option>
+            <option name="misura5" value="tsp">tsp</option>
+            <option name="misura5" value="bar spoon">Bar spoon</option>
+            <option name="misura5" value="dashes">dashes</option>
+            <option name="misura5" value="drops">drops</option>
+            <option name="misura5" value="slice">slice</option>
+        </select>
+        <br>
+        Preparation: <input type="text" name="preparation" id="preparation" placeholder="Preparation..." />
+        Add a photo: <input type="file" name="photo" id="photo" /> <br>
+        <input type="submit" value="Add" />
+    </form>
+</body>
+</html>
