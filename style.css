@@ -161,8 +161,9 @@ body {
               /*pagina cocktails*/
               #bannercocktail {
                 position: relative; /* Enable relative positioning for child elements */
-                height: 20rem;
+                height: 30rem;
                 text-align: center;
+                
               }
               
               #bannercocktail::before { 
@@ -172,7 +173,15 @@ body {
                 right: 0;
                 bottom: 0;
                 left: 0; /* Fill the entire #bannercocktail element */
-                background-image: url("immagini/alcolici.png");
+                background-image: url("immagini/cocktail3.png");
+                width: 100%;
+                height: 60rem;
+                background-repeat: no-repeat;
+                background-size: contain;
+                text-align: center;
+              
+                color: white;
+                padding: 0;
                 /* Set background opacity for semi-transparent effect */
                 opacity: 0.4;  /* Adjust as needed */
                 z-index: -1; /* Place the background behind the text content */
